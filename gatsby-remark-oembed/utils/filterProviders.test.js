@@ -2,14 +2,14 @@ const filterProviders = require("./filterProviders");
 
 describe("#filterProviders", () => {
   const kickstarter = {
-    provider_name: "Kickstarter"
+    provider_name: "Kickstarter",
   };
   const twitter = {
-    provider_name: "Twitter"
+    provider_name: "Twitter",
   };
 
   const instagram = {
-    provider_name: "Instagram"
+    provider_name: "Instagram",
   };
 
   const providers = [kickstarter, twitter, instagram];
@@ -22,7 +22,7 @@ describe("#filterProviders", () => {
   test("returns a list of providers with only Instagram", () => {
     const filteredProviders = filterProviders(providers, {
       include: ["Instagram", "Twitter"],
-      exclude: ["Twitter"]
+      exclude: ["Twitter"],
     });
 
     expect(filteredProviders).toEqual(
@@ -33,7 +33,7 @@ describe("#filterProviders", () => {
 
   test("returns a list of providers with only Instagram and Twitter", () => {
     const filteredProviders = filterProviders(providers, {
-      include: ["Instagram", "Twitter"]
+      include: ["Instagram", "Twitter"],
     });
 
     expect(filteredProviders).toEqual(
@@ -44,7 +44,7 @@ describe("#filterProviders", () => {
 
   test("returns a list of providers without Instagram and Twitter, ie. only Kickstarter", () => {
     const filteredProviders = filterProviders(providers, {
-      exclude: ["Instagram", "Twitter"]
+      exclude: ["Instagram", "Twitter"],
     });
 
     expect(filteredProviders).toEqual(

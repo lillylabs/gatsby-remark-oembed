@@ -6,4 +6,4 @@ public/
 .cache/
 coverage/
 .prefetched-providers.json
-*.log
+test.js

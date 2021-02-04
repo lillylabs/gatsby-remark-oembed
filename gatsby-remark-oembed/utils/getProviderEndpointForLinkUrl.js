@@ -19,7 +19,7 @@ const getProviderEndpointForLinkUrl = (linkUrl, providers) => {
           transformedEndpoint.url = endpoint.url;
           transformedEndpoint.params = {
             url: linkUrl,
-            ...provider.params
+            ...provider.params,
           };
         }
       }

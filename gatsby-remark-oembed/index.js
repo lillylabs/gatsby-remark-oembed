@@ -5,7 +5,7 @@ const {
   selectPossibleOembedLinkNodes,
   tranformsLinkNodeToOembedNode,
   logResults,
-  getProviders
+  getProviders,
 } = require("./utils");
 
 module.exports = async (
@@ -21,7 +21,7 @@ module.exports = async (
 
     if (nodes.length > 0) {
       const results = await Promise.all(
-        nodes.map(node => processNode(node, providers, reporter))
+        nodes.map((node) => processNode(node, providers, reporter))
       );
       logResults(results, markdownNode, reporter);
     }

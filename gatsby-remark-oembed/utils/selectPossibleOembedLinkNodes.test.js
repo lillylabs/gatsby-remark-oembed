@@ -12,47 +12,47 @@ describe("#selectPossibleOembedLinkNodes", () => {
     expect(possibleOembedLinks).toHaveLength(1);
     expect(possibleOembedLinks[0]).toMatchObject({
       type: "link",
-      url: "http://www.youtube.com/watch?v=iwGFalTRHDA"
+      url: "http://www.youtube.com/watch?v=iwGFalTRHDA",
     });
   });
 
   test("select only links that inline code and prefixed with 'oembed:'", () => {
     const possibleOembedLinks = selectPossibleOembedLinkNodes(MARKDOWN_AST, [
-      "oembed"
+      "oembed",
     ]);
     expect(possibleOembedLinks).toHaveLength(1);
     // allow space after 'oembed:'
     expect(possibleOembedLinks[0]).toMatchObject({
       type: "inlineCode",
-      url: "https://twitter.com/raae/status/1045394833001652225"
+      url: "https://twitter.com/raae/status/1045394833001652225",
     });
   });
 
   test("select only links that inline code and prefixed with 'video:'", () => {
     const possibleOembedLinks = selectPossibleOembedLinkNodes(MARKDOWN_AST, [
-      "video"
+      "video",
     ]);
     expect(possibleOembedLinks).toHaveLength(1);
     expect(possibleOembedLinks[0]).toMatchObject({
       type: "inlineCode",
-      url: "https://www.twitch.tv/videos/72749628"
+      url: "https://www.twitch.tv/videos/72749628",
     });
   });
 
   test("select only links that inline code and prefixed with 'oembed:' or 'video:'", () => {
     const possibleOembedLinks = selectPossibleOembedLinkNodes(MARKDOWN_AST, [
       "oembed",
-      "video"
+      "video",
     ]);
     expect(possibleOembedLinks).toHaveLength(2);
     // allow space after 'oembed:'
     expect(possibleOembedLinks[0]).toMatchObject({
       type: "inlineCode",
-      url: "https://twitter.com/raae/status/1045394833001652225"
+      url: "https://twitter.com/raae/status/1045394833001652225",
     });
     expect(possibleOembedLinks[1]).toMatchObject({
       type: "inlineCode",
-      url: "https://www.twitch.tv/videos/72749628"
+      url: "https://www.twitch.tv/videos/72749628",
     });
   });
 });

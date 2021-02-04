@@ -4,12 +4,12 @@ describe("#logResults", () => {
   const results1 = [undefined, new Error("Test Error"), {}, {}, undefined, {}];
   const reporter1 = {
     info: jest.fn(),
-    error: jest.fn()
+    error: jest.fn(),
   };
   const results2 = [{}, {}];
   const reporter2 = {
     info: jest.fn(),
-    error: jest.fn()
+    error: jest.fn(),
   };
   logResults(results1, { id: "markdownNode1" }, reporter1);
   logResults(results2, { id: "markdownNode2" }, reporter2);

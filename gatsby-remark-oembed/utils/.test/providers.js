@@ -3,7 +3,7 @@ module.exports = [
     provider_name: "Instagram",
     provider_url: "https://instagram.com",
     params: {
-      access_token: "valid_token"
+      access_token: "valid_token",
     },
     endpoints: [
       {
@@ -15,12 +15,12 @@ module.exports = [
           "https://instagram.com/p/*",
           "https://instagr.am/p/*",
           "https://www.instagram.com/p/*",
-          "https://www.instagr.am/p/*"
+          "https://www.instagr.am/p/*",
         ],
         url: "https://api.instagram.com/oembed",
-        formats: ["json"]
-      }
-    ]
+        formats: ["json"],
+      },
+    ],
   },
   {
     provider_name: "Twitter",
@@ -29,11 +29,11 @@ module.exports = [
       {
         schemes: [
           "https://twitter.com/*/status/*",
-          "https://*.twitter.com/*/status/*"
+          "https://*.twitter.com/*/status/*",
         ],
-        url: "https://publish.twitter.com/oembed"
-      }
-    ]
+        url: "https://publish.twitter.com/oembed",
+      },
+    ],
   },
   {
     provider_name: "Vimeo",
@@ -46,12 +46,12 @@ module.exports = [
           "https://vimeo.com/channels/*/*",
           "https://vimeo.com/groups/*/videos/*",
           "https://vimeo.com/ondemand/*/*",
-          "https://player.vimeo.com/video/*"
+          "https://player.vimeo.com/video/*",
         ],
         url: "https://vimeo.com/api/oembed.{format}",
-        discovery: true
-      }
-    ]
+        discovery: true,
+      },
+    ],
   },
   {
     provider_name: "Test1",
@@ -59,9 +59,9 @@ module.exports = [
     endpoints: [
       {
         schemes: ["https://test1.com/*"],
-        url: "https://test1.com/oembed"
-      }
-    ]
+        url: "https://test1.com/oembed",
+      },
+    ],
   },
   {
     provider_name: "Test3",
@@ -69,15 +69,15 @@ module.exports = [
     endpoints: [
       {
         schemes: ["https://test3.com/*"],
-        url: "https://test3.com/oembed"
-      }
-    ]
-  },
-  {
-    provider_name: "Test4"
+        url: "https://test3.com/oembed",
+      },
+    ],
   },
   {
     provider_name: "Test4",
-    endpoints: [{}]
-  }
+  },
+  {
+    provider_name: "Test4",
+    endpoints: [{}],
+  },
 ];

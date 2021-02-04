@@ -2,7 +2,7 @@ const tranformsLinkNodeToOembedNode = require("./tranformsLinkNodeToOembedNode")
 
 describe("#tranformsLinkNodeToOembedNode", () => {
   const originalNode = {
-    type: "link"
+    type: "link",
   };
 
   const transformedNode = tranformsLinkNodeToOembedNode(originalNode, {
@@ -19,7 +19,7 @@ describe("#tranformsLinkNodeToOembedNode", () => {
     title: "GatsbyJS Tutorials #1 - Getting Started with Gatsby",
     type: "video",
     version: "1.0",
-    width: 480
+    width: 480,
   });
 
   test("change node type to html", () => {

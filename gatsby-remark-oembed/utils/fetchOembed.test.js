@@ -9,39 +9,39 @@ describe("#fetchOembed", () => {
   const endpoint = {
     url: "https://api.instagram.com/oembed",
     params: {
-      url: "https://www.instagram.com/p/BftIg_OFPFX/"
-    }
+      url: "https://www.instagram.com/p/BftIg_OFPFX/",
+    },
   };
 
   afterEach(() => {
     mock.reset();
   });
 
-  test("succeeded fetch return unaltered response.data", done => {
+  test("succeeded fetch return unaltered response.data", (done) => {
     mock.onGet(endpoint.url).reply(200, response);
 
-    fetchOembed(endpoint).then(result => {
+    fetchOembed(endpoint).then((result) => {
       expect(result).toMatchObject(response);
       done();
     });
   });
 
-  test("failed fetch returns unaltered error", done => {
+  test("failed fetch returns unaltered error", (done) => {
     mock.onGet(endpoint.url).networkError();
 
-    fetchOembed(endpoint).catch(result => {
+    fetchOembed(endpoint).catch((result) => {
       expect(result).toMatchObject(new Error("Network Error"));
       done();
     });
   });
 
-  test("calls axios get function with correct params", done => {
+  test("calls axios get function with correct params", (done) => {
     mock.onGet(endpoint.url).reply(200, response);
 
     fetchOembed(endpoint).then(() => {
       expect(mock.history.get[0].params).toEqual({
         url: "https://www.instagram.com/p/BftIg_OFPFX/",
-        format: "json"
+        format: "json",
       });
       done();
     });

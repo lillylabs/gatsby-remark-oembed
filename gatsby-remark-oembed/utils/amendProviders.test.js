@@ -4,55 +4,55 @@ const PROVIDERS = require("./.test/providers");
 describe("#amendProviders", () => {
   const providerSettings = {
     Twitter: {
-      theme: "dark"
+      theme: "dark",
     },
     Instagram: {
       hidecaption: true,
-      omitscript: true
+      omitscript: true,
     },
     Test1: {
       param1: "param1",
       endpoints: [
         {
-          schemes: ["https://test1.no/*"]
-        }
-      ]
+          schemes: ["https://test1.no/*"],
+        },
+      ],
     },
     Test2: {
       param2: "param2",
       endpoints: [
         {
           schemes: ["https://test2.com/*"],
-          url: "https://test2.com/oembed"
-        }
-      ]
-    }
+          url: "https://test2.com/oembed",
+        },
+      ],
+    },
   };
 
   const amendedProviders = amendProviders(PROVIDERS, providerSettings);
 
   const amendedTwitter = amendedProviders.find(
-    provider => provider.provider_name === "Twitter"
+    (provider) => provider.provider_name === "Twitter"
   );
 
   const amendedInstagram = amendedProviders.find(
-    provider => provider.provider_name === "Instagram"
+    (provider) => provider.provider_name === "Instagram"
   );
 
   const amendedVimeo = amendedProviders.find(
-    provider => provider.provider_name === "Vimeo"
+    (provider) => provider.provider_name === "Vimeo"
   );
 
   const amendedTest1 = amendedProviders.find(
-    provider => provider.provider_name === "Test1"
+    (provider) => provider.provider_name === "Test1"
   );
 
   const addedTest2 = amendedProviders.find(
-    provider => provider.provider_name === "Test2"
+    (provider) => provider.provider_name === "Test2"
   );
 
   const untouchedTest3 = amendedProviders.find(
-    provider => provider.provider_name === "Test3"
+    (provider) => provider.provider_name === "Test3"
   );
 
   test("amended providers list is expected length", () => {

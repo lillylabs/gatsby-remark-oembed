@@ -18,8 +18,8 @@ describe("#getProviderEndpointForLinkUrl", () => {
       url: "https://api.instagram.com/oembed",
       params: {
         url: "https://www.instagram.com/p/BftIg_OFPFX/",
-        access_token: "valid_token"
-      }
+        access_token: "valid_token",
+      },
     });
 
     expect(
@@ -39,10 +39,10 @@ describe("#getProviderEndpointForLinkUrl", () => {
           {
             schemes: ["https://www.instagram.com/p/*"],
             url: "https://api.instagram.com/oembed",
-            formats: ["json"]
-          }
-        ]
-      }
+            formats: ["json"],
+          },
+        ],
+      },
     ];
 
     test("throw error when Instagram link and no access_token", () => {

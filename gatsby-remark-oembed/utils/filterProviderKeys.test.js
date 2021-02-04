@@ -11,7 +11,7 @@ describe("#filterProviderKeys", () => {
   test("returns a list of providers with only Instagram", () => {
     const filteredProviders = filterProviderKeys(providers, {
       include: ["Instagram", "Twitter"],
-      exclude: ["Twitter"]
+      exclude: ["Twitter"],
     });
 
     expect(filteredProviders).toEqual(
@@ -22,7 +22,7 @@ describe("#filterProviderKeys", () => {
 
   test("returns a list of providers with only Instagram and Twitter", () => {
     const filteredProviders = filterProviderKeys(providers, {
-      include: ["Instagram", "Twitter"]
+      include: ["Instagram", "Twitter"],
     });
 
     expect(filteredProviders).toEqual(
@@ -33,7 +33,7 @@ describe("#filterProviderKeys", () => {
 
   test("returns a list of providers without Instagram and Twitter, ie. only Kickstarter", () => {
     const filteredProviders = filterProviderKeys(providers, {
-      exclude: ["Instagram", "Twitter"]
+      exclude: ["Instagram", "Twitter"],
     });
 
     expect(filteredProviders).toEqual(
