@@ -26,12 +26,6 @@
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^1.2.0",
-    "prettier": "^1.14.2"
-  },
   "homepage": "https://github.com/raae/gatsby-remark-oembed-example-site#readme",
   "keywords": [
     "gatsby"
@@ -46,7 +40,6 @@
     "dev": "rm -r -f .cache && gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "rm -r -f .cache && gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",

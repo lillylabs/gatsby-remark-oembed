@@ -1,11 +1,11 @@
 const axios = require("axios");
 
-const fetchOembed = async endpoint => {
+const fetchOembed = async (endpoint) => {
   const response = await axios.get(endpoint.url, {
     params: {
       format: "json",
-      ...endpoint.params
-    }
+      ...endpoint.params,
+    },
   });
   return response.data;
 };

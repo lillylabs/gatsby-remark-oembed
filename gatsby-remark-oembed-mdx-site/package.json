@@ -28,9 +28,7 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^1.2.0",
-    "prettier": "^1.14.2"
+    "eslint-plugin-react": "^7.11.1"
   },
   "homepage": "https://github.com/raae/gatsby-remark-oembed-example-site#readme",
   "keywords": [

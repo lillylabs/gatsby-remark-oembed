@@ -5,7 +5,7 @@ const SCRIPTS = {
   Twitter: "https://platform.twitter.com/widgets.js",
   Instagram: "https://www.instagram.com/embed.js",
   Flickr: "https://embedr.flickr.com/assets/client-code.js",
-  Reddit: "https://embed.redditmedia.com/widgets/platform.js"
+  Reddit: "https://embed.redditmedia.com/widgets/platform.js",
 };
 
 const createScriptTag = (key, scriptSrc) => {
@@ -24,6 +24,6 @@ exports.onRenderBody = ({ setPostBodyComponents }, options) => {
     options.providers
   );
 
-  const scripts = scriptKeys.map(key => createScriptTag(key, SCRIPTS[key]));
+  const scripts = scriptKeys.map((key) => createScriptTag(key, SCRIPTS[key]));
   setPostBodyComponents(scripts);
 };

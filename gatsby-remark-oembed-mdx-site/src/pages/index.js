@@ -15,7 +15,7 @@ const BlogMdxIndex = ({ data, pageContext, location }) => {
             <h1>
               <Link
                 style={{
-                  boxShadow: "none"
+                  boxShadow: "none",
                 }}
                 to={node.fields.slug}
               >

@@ -1,6 +1,0 @@
-language: node_js
-os: linux
-node_js:
-  - "lts/*"
-script:
-  - yarn workspace @raae/gatsby-remark-oembed validate

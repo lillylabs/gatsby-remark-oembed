@@ -7,7 +7,7 @@ const selectPossibleOembedLinkNodes = (markdownAST, usePrefix = false) => {
     const inlineCodeNodes = select(markdownAST, "inlineCode");
     const selectedNodes = [];
 
-    inlineCodeNodes.forEach(inlineCodeNode => {
+    inlineCodeNodes.forEach((inlineCodeNode) => {
       const [prefix, ...rest] = inlineCodeNode.value.split(":");
       if (usePrefix.includes(prefix.trim())) {
         inlineCodeNode.url = rest.join(":").trim();

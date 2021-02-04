@@ -15,15 +15,15 @@ module.exports = {
           position: {
             start: { line: 2, column: 1, offset: 1 },
             end: { line: 2, column: 52, offset: 52 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 2, column: 1, offset: 1 },
         end: { line: 2, column: 52, offset: 52 },
-        indent: []
-      }
+        indent: [],
+      },
     },
     {
       type: "paragraph",
@@ -39,22 +39,22 @@ module.exports = {
               position: {
                 start: { line: 4, column: 1, offset: 54 },
                 end: { line: 4, column: 40, offset: 93 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: { line: 4, column: 1, offset: 54 },
             end: { line: 4, column: 40, offset: 93 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 4, column: 1, offset: 54 },
         end: { line: 4, column: 40, offset: 93 },
-        indent: []
-      }
+        indent: [],
+      },
     },
     {
       type: "paragraph",
@@ -65,8 +65,8 @@ module.exports = {
           position: {
             start: { line: 6, column: 1, offset: 95 },
             end: { line: 6, column: 32, offset: 126 },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: "link",
@@ -79,15 +79,15 @@ module.exports = {
               position: {
                 start: { line: 6, column: 33, offset: 127 },
                 end: { line: 6, column: 43, offset: 137 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: { line: 6, column: 32, offset: 126 },
             end: { line: 6, column: 64, offset: 158 },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: "text",
@@ -95,15 +95,15 @@ module.exports = {
           position: {
             start: { line: 6, column: 64, offset: 158 },
             end: { line: 6, column: 65, offset: 159 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 6, column: 1, offset: 95 },
         end: { line: 6, column: 65, offset: 159 },
-        indent: []
-      }
+        indent: [],
+      },
     },
     {
       type: "paragraph",
@@ -114,15 +114,15 @@ module.exports = {
           position: {
             start: { line: 8, column: 1, offset: 161 },
             end: { line: 8, column: 62, offset: 222 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 8, column: 1, offset: 161 },
         end: { line: 8, column: 62, offset: 222 },
-        indent: []
-      }
+        indent: [],
+      },
     },
     {
       type: "paragraph",
@@ -133,15 +133,15 @@ module.exports = {
           position: {
             start: { line: 8, column: 1, offset: 161 },
             end: { line: 8, column: 62, offset: 222 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 8, column: 1, offset: 161 },
         end: { line: 8, column: 62, offset: 222 },
-        indent: []
-      }
+        indent: [],
+      },
     },
     {
       type: "paragraph",
@@ -152,19 +152,19 @@ module.exports = {
           position: {
             start: { line: 10, column: 1, offset: 224 },
             end: { line: 10, column: 49, offset: 272 },
-            indent: []
-          }
-        }
+            indent: [],
+          },
+        },
       ],
       position: {
         start: { line: 10, column: 1, offset: 224 },
         end: { line: 10, column: 49, offset: 272 },
-        indent: []
-      }
-    }
+        indent: [],
+      },
+    },
   ],
   position: {
     start: { line: 1, column: 1, offset: 0 },
-    end: { line: 11, column: 1, offset: 273 }
-  }
+    end: { line: 11, column: 1, offset: 273 },
+  },
 };

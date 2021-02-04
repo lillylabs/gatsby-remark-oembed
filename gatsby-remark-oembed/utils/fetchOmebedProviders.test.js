@@ -12,19 +12,19 @@ describe("#fetchOembedProviders", () => {
     mock.reset();
   });
 
-  test("succeeded fetch return unaltered response.data", done => {
+  test("succeeded fetch return unaltered response.data", (done) => {
     mock.onGet(url).reply(200, response);
 
-    fetchOembedProviders().then(result => {
+    fetchOembedProviders().then((result) => {
       expect(result).toMatchObject(response);
       done();
     });
   });
 
-  test("failed fetch returns unaltered error", done => {
+  test("failed fetch returns unaltered error", (done) => {
     mock.onGet(url).networkError();
 
-    fetchOembedProviders().catch(result => {
+    fetchOembedProviders().catch((result) => {
       expect(result).toMatchObject(new Error("Network Error"));
       done();
     });

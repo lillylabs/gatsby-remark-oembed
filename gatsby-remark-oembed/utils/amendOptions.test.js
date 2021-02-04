@@ -4,7 +4,7 @@ describe("#amendProviders", () => {
   test("no change to default options", () => {
     const rawOptions = {};
     const amendedOptions = {
-      usePrefix: false
+      usePrefix: false,
     };
 
     expect(amendOptions(rawOptions)).toEqual(amendedOptions);
@@ -12,11 +12,11 @@ describe("#amendProviders", () => {
 
   test("usePrefix = 'true' amended correctly", () => {
     const rawOptions = {
-      usePrefix: true
+      usePrefix: true,
     };
 
     const amendedOptions = {
-      usePrefix: ["oembed"]
+      usePrefix: ["oembed"],
     };
 
     expect(amendOptions(rawOptions)).toEqual(amendedOptions);
@@ -24,19 +24,19 @@ describe("#amendProviders", () => {
 
   test("usePrefix = <array> amended correctly", () => {
     const rawOptions1 = {
-      usePrefix: ["oembed", "video"]
+      usePrefix: ["oembed", "video"],
     };
 
     const amendedOptions1 = {
-      usePrefix: ["oembed", "video"]
+      usePrefix: ["oembed", "video"],
     };
 
     const rawOptions2 = {
-      usePrefix: ["video"]
+      usePrefix: ["video"],
     };
 
     const amendedOptions2 = {
-      usePrefix: ["video"]
+      usePrefix: ["video"],
     };
 
     expect(amendOptions(rawOptions1)).toEqual(amendedOptions1);
@@ -49,13 +49,13 @@ describe("#amendProviders", () => {
         include: ["Instagram"],
         settings: {
           Twitter: {
-            theme: "dark" // Use the Twitter dark theme
+            theme: "dark", // Use the Twitter dark theme
           },
           Codepen: {
-            height: 200
-          }
-        }
-      }
+            height: 200,
+          },
+        },
+      },
     };
 
     const amendedOptions = {
@@ -63,13 +63,13 @@ describe("#amendProviders", () => {
         include: ["Instagram"],
         settings: {
           Twitter: {
-            theme: "dark" // Use the Twitter dark theme
+            theme: "dark", // Use the Twitter dark theme
           },
           Codepen: {
-            height: 200
-          }
-        }
-      }
+            height: 200,
+          },
+        },
+      },
     };
 
     expect(amendOptions(rawOptions)).toMatchObject(amendedOptions);

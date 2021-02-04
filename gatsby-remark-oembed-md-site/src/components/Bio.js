@@ -15,7 +15,7 @@ class Bio extends React.Component {
         style={{
           display: "flex",
           marginBottom: rhythm(2.5),
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <img
@@ -26,13 +26,13 @@ class Bio extends React.Component {
             marginBottom: 0,
             width: rhythm(4),
             height: rhythm(4),
-            flexShrink: 0
+            flexShrink: 0,
           }}
         />
         <div>
           <p
             style={{
-              marginBottom: rhythm(0.4)
+              marginBottom: rhythm(0.4),
             }}
           >
             Example site for the{" "}
@@ -43,7 +43,7 @@ class Bio extends React.Component {
           </p>
           <p
             style={{
-              marginBottom: 0
+              marginBottom: 0,
             }}
           >
             Created by @raae: <a href="https://twitter.com/raae">Twitter</a>,{" "}

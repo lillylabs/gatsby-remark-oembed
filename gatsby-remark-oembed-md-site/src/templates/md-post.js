@@ -13,7 +13,7 @@ const MdPostTemplate = ({ data, pageContext }) => {
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{
-          marginBottom: rhythm(1)
+          marginBottom: rhythm(1),
         }}
       />
     </Layout>

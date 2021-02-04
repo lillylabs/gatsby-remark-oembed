@@ -5,20 +5,28 @@
     "gatsby-*"
   ],
   "scripts": {
-    "plugin-dev": "yarn workspace @raae/gatsby-remark-oembed dev",
-    "plugin-format": "yarn workspace @raae/gatsby-remark-oembed format",
-    "md-site-dev": "yarn workspace gatsby-remark-oembed-md-site dev",
-    "md-site-build": "yarn workspace gatsby-remark-oembed-md-site build",
-    "md-site-format": "yarn workspace gatsby-remark-oembed-md-site format",
-    "mdx-site-dev": "yarn workspace gatsby-remark-oembed-mdx-site dev",
-    "mdx-site-build": "yarn workspace gatsby-remark-oembed-mdx-site build",
-    "mdx-site-format": "yarn workspace gatsby-remark-oembed-mdx-site format",
-    "example-content-format": "prettier --write 'example-content/**/*.md'",
-    "dev": "concurrently --kill-others-on-fail \"yarn plugin-dev\" \"yarn md-site-dev\" \"yarn mdx-site-dev\"",
-    "format": "concurrently --kill-others-on-fail \"yarn plugin-format\" \"yarn md-site-format\" \"yarn mdx-site-format\" \"yarn example-content-format\""
+    "plugin:develop": "yarn workspace @raae/gatsby-remark-oembed dev",
+    "md-site:develop": "yarn workspace gatsby-remark-oembed-md-site dev",
+    "md-site:build": "yarn workspace gatsby-remark-oembed-md-site build",
+    "mdx-site:develop": "yarn workspace gatsby-remark-oembed-mdx-site dev",
+    "mdx-site:build": "yarn workspace gatsby-remark-oembed-mdx-site build",
+    "lint": "yarn workspace @raae/gatsby-remark-oembed lint",
+    "prettier": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run prettier"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "yarn prettier",
+      "yarn lint"
+    ]
   },
   "devDependencies": {
-    "prettier": "^2.1.2",
-    "concurrently": "^5.0.0"
+    "husky": "4.3.8",
+    "lint-staged": "10.5.3",
+    "prettier": "^2.1.2"
   }
 }
